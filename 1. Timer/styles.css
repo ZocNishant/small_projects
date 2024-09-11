@@ -1,72 +1,96 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: cursive;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-}
-
-#main {
-  height: 100vh;
-  width: 100vw;
-  background-color: navy;
+  background-color: #002d62;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#container {
-  height: 70vh;
-  width: 90vh;
-  background-color: rgb(221, 186, 186);
-  border-radius: 8vh;
-  padding: 1vw;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  background-color: #a4dded;
+  gap: 1.5rem;
 }
 
-#name {
-  padding: 3vw;
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.time {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: 2.4rem;
+  background-color: #c3edf9;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  /* animation: thuloSano 1.5s infinite alternate; */
 }
 
-#timer {
+@keyframes thuloSano {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.time span {
+  width: 5rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.buttons {
+  padding: 0.3rem;
+  width: 30rem;
+  height: 5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 4.8vw;
-  gap: 2.5vw;
-  background-color: #bbb9b9;
-  border-radius: 4vh;
+  justify-content: space-around;
 }
 
-#button {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 5vh;
-}
-
-#button button {
-  height: 9vh;
-  width: 10vw;
-  border-radius: 4vh;
-  border: 1px solid #000;
-}
-
-button:hover {
+.buttons button {
+  padding: 0.3rem 0.6rem;
+  border-radius: 17px;
+  height: 2.5rem;
+  width: 6rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
   cursor: pointer;
+  background-color: #c3edf9;
 }
 
-#lastName {
-  display: flex;
-  justify-content: start;
-  margin-top: 1.8vh;
-  margin-left: 5vw;
-  font-size: 3vw;
+.laptimer {
+  width: 30rem;
+  overflow-y: auto;
+}
+
+.laptimer h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lapList {
+  background-color: #c3edf9;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
