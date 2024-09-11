@@ -1,5 +1,7 @@
 const btns = document.querySelectorAll("button");
 
-btns.map((item) => {
-  console.log(item);
+btns.forEach((item) => {
+  item.addEventListener("click", function () {
+    console.log("Pasa");
+  });
 });
