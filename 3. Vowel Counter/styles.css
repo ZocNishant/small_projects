@@ -1,5 +1,65 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+}
+
+.container {
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 2rem;
+  gap: 1.5rem;
+  height: 60vh;
+  width: 60vw;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+  color: white;
+}
+
+.textBox textarea {
+  height: 15rem;
+  width: 23rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(255, 138, 96);
+  margin-top: -20px;
+}
+
+.button button {
+  background-color: greenyellow;
+  height: 3rem;
+  width: 23rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  border: none;
+  border-radius: 1rem;
+}
+
+.result {
+  margin-top: -12px;
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  font-size: larger;
+  color: white;
 }
