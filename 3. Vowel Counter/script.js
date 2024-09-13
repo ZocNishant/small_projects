@@ -1,33 +1,42 @@
-const textBox = document.querySelector("#text");
+const vowelCheckerFn = () => {
+  const textBox = document.querySelector("#text");
+  const countBtn = document.querySelector("#countBtn");
 
-const countBtn = document.querySelector("#countBtn");
+  let vowelCounter;
 
-let vowelCounter;
-let countOfA;
-let countOfE;
-let countOfI;
-let countOfO;
-let countOfU;
+  countBtn.addEventListener("click", function () {
+    const text = textBox.value.toLowerCase().split("");
 
-countBtn.addEventListener("click", function () {
-  let text = textBox.value.split("");
+    let countOfA = 0;
+    let countOfE = 0;
+    let countOfI = 0;
+    let countOfO = 0;
+    let countOfU = 0;
 
-  text.forEach((alphabet) => {
-    if (alphabet === "a") {
-      countOfA = text.filter((item) => item === "a").length;
-    } else if (alphabet === "e") {
-      countOfE = text.filter((item) => item === "e").length;
-    } else if (alphabet === "i") {
-      countOfI = text.filter((item) => item === "i").length;
-    } else if (alphabet === "o") {
-      countOfO = text.filter((item) => item === "u").length;
-    } else if (alphabet === "u") {
-      countOfU = text.filter((item) => item === "u").length;
-    } else {
-      console.log("Pasa");
-    }
+    text.forEach((alphabet) => {
+      if (alphabet === "a") {
+        countOfA++;
+      } else if (alphabet === "e") {
+        countOfE++;
+      } else if (alphabet === "i") {
+        countOfI++;
+      } else if (alphabet === "o") {
+        countOfO++;
+      } else if (alphabet === "u") {
+        countOfU++;
+      }
+    });
+
+    const vowelCounter = countOfA + countOfE + countOfI + countOfO + countOfU;
+    document.querySelector(
+      ".showResult"
+    ).textContent = `Result: ${vowelCounter}`;
+
+    clearTxtArea();
   });
+};
 
-  vowelCounter = countOfA + countOfE + countOfI + countOfO + countOfU;
-  console.log(vowelCounter);
-});
+const clearTxtArea = () => {
+  const textBox = document.querySelector("#text");
+  textBox.value = "";
+};
