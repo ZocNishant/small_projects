@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Poll System | Zoc</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Poll System</h1>
+      <h2>What is your favourite programming language??</h2>
+
+      <section class="buttons">
+        <button class="javascript">JavaScript</button>
+        <button class="python">Python</button>
+        <button class="cplus">C++</button>
+        <button class="java">Java</button>
+        <button class="castVote">Start Vote</button>
+      </section>
+
+      <section class="poll">
+        <span
+          >JavaScript <span class="line jsline"></span
+          ><span id="jsPercent">0%</span></span
+        >
+        <span
+          >Python <span class="pyline line"></span
+          ><span id="pyPercent">0%</span></span
+        >
+        <span
+          >C++ <span class="cppline line"></span
+          ><span id="cppPercent">0%</span></span
+        >
+        <span
+          >Java <span class="line javaline"></span
+          ><span id="javaPercent">0%</span></span
+        >
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
