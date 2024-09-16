@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background-color: #1b1212;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundOuterCircle {
+  position: relative;
+  height: 70vh;
+  width: 70vh;
+  background-color: #28282b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.num {
+  position: absolute;
+  color: whitesmoke;
+  inset: 20px;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--clock)));
+}
+
+.num b {
+  transform: rotate(calc(-30deg * var(--clock)));
+  display: inline-block;
+}
+
+.hoursHand,
+.minutesHand,
+.secondsHand {
+  transform-origin: bottom;
+}
+
+.roundInnerCircle {
+  height: 8%;
+  width: 8%;
+  background-color: #1b1212;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+}
+
+.secondsHand {
+  height: 30%;
+  width: 0.3%;
+  top: 20%;
+  border: none;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+}
+
+.minutesHand {
+  height: 32%;
+  width: 1%;
+  top: 18%;
+  border: none;
+  border-radius: 100%;
+  background-color: green;
+  position: absolute;
+}
+
+.hoursHand {
+  height: 32%;
+  width: 1%;
+  top: 18%;
+  border: none;
+  border-radius: 100%;
+  background-color: yellow;
+  position: absolute;
+}
